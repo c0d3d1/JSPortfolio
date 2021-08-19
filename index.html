@@ -1,206 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Portfolio Website</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/font-awesome.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <title>Portfolio Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Bg Animation Effect Start -->
+    <div class="bg-animation-effect"></div>
+    <!-- Bg Animation Effect End -->
 
-<!-- Bg Animation Effect Start -->
-<div class="bg-animation-effect">
+    <!-- About Section Start-->
+    <section class="about-section hidden">
+      <div class="container">
+        <div class="row min-vh-100">
+          <div class="about-content">
+            <img src="img/profile-img.jpg" alt="profile-img" />
+            <h1>Hello, I am Devan Comes.</h1>
+            <p>
+              I am a <span>developer</span> in Arizona. I make
+              <span>games and applications</span> using
+              <span>C#, Unity and Python.</span> You can see my projects on my
+              <a href="#">Portfolio page.</a> Want to talk?
+              <a href="#">Click here. </a>
+            </p>
+            <h2>Skills</h2>
+            <div class="skills">
+              <div class="skill-item">Python</div>
+              <div class="skill-item">C#</div>
+              <div class="skill-item">Unity</div>
+              <div class="skill-item">Machine Learning</div>
+              <div class="skill-item">Teaching</div>
+              <div class="skill-item">HTML & CSS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
 
-</div>
-<!-- Bg Animation Effect End -->
+    <!-- Portfolio Section Start -->
 
-<!-- About Section Start-->  
-<section class="about-section hidden">
-  <div class="container">
-    <div class="row min-vh-100">
-      <div class="about-content">
-        <img src="img/profile-img.jpg" alt="profile-img">
-        <h1>Hello, I am Devan Comes.</h1>
-        <p>I am a <span>developer</span> in Arizona. I make 
-          <span>games and applications</span> using <span>C#, Unity and Python.</span> 
-          You can see my projects on my <a href="#">Portfolio page.</a>
-          Want to talk? <a href="#">Click here. </a>
-        </p>
-        <h2>Skills</h2>
-        <div class="skills">
-          <div class="skill-item">Python</div>
-          <div class="skill-item">C#</div>
-          <div class="skill-item">Unity</div>
-          <div class="skill-item">Machine Learning</div>
-          <div class="skill-item">Teaching</div>
-          <div class="skill-item">HTML & CSS</div>
+    <section class="portfolio-section sec-padding">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2>Recent Work.</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="portfolio-filter">
+            <button
+              type="button"
+              title="Show All Work."
+              class="portfolio-filter-btn active"
+              data-filter="all"
+            >
+              all
+            </button>
+            <button
+              type="button"
+              title="Filter by Python"
+              class="portfolio-filter-btn"
+              data-filter="python"
+            >
+              Python
+            </button>
+            <button
+              type="button"
+              title="Filter by Unity"
+              class="portfolio-filter-btn"
+              data-filter="unity"
+            >
+              Unity
+            </button>
+            <button
+              type="button"
+              title="Filter by Machine Learning"
+              class="portfolio-filter-btn"
+              data-filter="machine_learning"
+            >
+              Machine Learning
+            </button>
+          </div>
+          <div class="filter-status">
+            <p></p>
+          </div>
+        </div>
+        <div class="row portfolio-items">
+          <!-- Portfolio item start -->
+          <div class="portfolio-item" data-category="python">
+            <div class="portfolio-item-thumbnail">
+              <img src="img/portfolio/1.jpg" alt="thumbnail" />
+              <button type="button" class="btn more-info-btn">
+                More info.
+              </button>
+            </div>
+            <h3 class="portfolio-item-title">Calculator Project.</h3>
+            <div class="portfolio-item-details">
+              <div class="description">
+                <p>
+                  Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui
+                  qui labore duis mollit eiusmod exercitation. Ex non magna sit
+                  sint voluptate ullamco consequat ex. Ad sit pariatur
+                  consectetur nisi eu esse ea veniam pariatur sunt fugiat ea
+                  minim et.
+                </p>
+              </div>
+              <div class="general-info">
+                <p>Technologies used - <span>Python, Tkinter</span></p>
+                <p>
+                  View Online -
+                  <span><a href="#" target="_blank">www.domain.com</a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item end -->
+
+          <!-- Portfolio item start -->
+          <div class="portfolio-item" data-category="python,machine_learning">
+            <div class="portfolio-item-thumbnail">
+              <img src="img/portfolio/2.jpg" alt="thumbnail" />
+              <button type="button" class="btn more-info-btn">
+                More info.
+              </button>
+            </div>
+            <h3 class="portfolio-item-title">Cats vs Dogs Classifier.</h3>
+            <div class="portfolio-item-details">
+              <div class="description">
+                <p>
+                  Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui
+                  qui labore duis mollit eiusmod exercitation. Ex non magna sit
+                  sint voluptate ullamco consequat ex. Ad sit pariatur
+                  consectetur nisi eu esse ea veniam pariatur sunt fugiat ea
+                  minim et.
+                </p>
+              </div>
+              <div class="general-info">
+                <p>Technologies used - <span>Python, Pytorch</span></p>
+                <p>
+                  View Online -
+                  <span><a href="#" target="_blank">www.domain.com</a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item end -->
+
+          <!-- Portfolio item start -->
+          <div class="portfolio-item" data-category="unity">
+            <div class="portfolio-item-thumbnail">
+              <img src="img/portfolio/3.jpg" alt="thumbnail" />
+              <button type="button" class="btn more-info-btn">
+                More info.
+              </button>
+            </div>
+            <h3 class="portfolio-item-title">Wowie Jam 2.0.</h3>
+            <div class="portfolio-item-details">
+              <div class="description">
+                <p>
+                  Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui
+                  qui labore duis mollit eiusmod exercitation. Ex non magna sit
+                  sint voluptate ullamco consequat ex. Ad sit pariatur
+                  consectetur nisi eu esse ea veniam pariatur sunt fugiat ea
+                  minim et.
+                </p>
+              </div>
+              <div class="general-info">
+                <p>Technologies used - <span>Unity, C#</span></p>
+                <p>
+                  View Online -
+                  <span><a href="#" target="_blank">www.domain.com</a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item end -->
+
+          <!-- Portfolio item start -->
+          <div class="portfolio-item" data-category="python">
+            <div class="portfolio-item-thumbnail">
+              <img src="img/portfolio/4.jpg" alt="thumbnail" />
+              <button type="button" class="btn more-info-btn">
+                More info.
+              </button>
+            </div>
+            <h3 class="portfolio-item-title">Mini Projects.</h3>
+            <div class="portfolio-item-details">
+              <div class="description">
+                <p>
+                  Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui
+                  qui labore duis mollit eiusmod exercitation. Ex non magna sit
+                  sint voluptate ullamco consequat ex. Ad sit pariatur
+                  consectetur nisi eu esse ea veniam pariatur sunt fugiat ea
+                  minim et.
+                </p>
+              </div>
+              <div class="general-info">
+                <p>Technology used - <span>Python</span></p>
+                <p>
+                  View Online -
+                  <span><a href="#" target="_blank">www.domain.com</a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item end -->
+
+          <!-- Portfolio item start -->
+          <div class="portfolio-item" data-category="unity">
+            <div class="portfolio-item-thumbnail">
+              <img src="img/portfolio/5.jpg" alt="thumbnail" />
+              <button type="button" class="btn more-info-btn">
+                More info.
+              </button>
+            </div>
+            <h3 class="portfolio-item-title">Wowie Jam 3.0.</h3>
+            <div class="portfolio-item-details">
+              <div class="description">
+                <p>
+                  Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui
+                  qui labore duis mollit eiusmod exercitation. Ex non magna sit
+                  sint voluptate ullamco consequat ex. Ad sit pariatur
+                  consectetur nisi eu esse ea veniam pariatur sunt fugiat ea
+                  minim et.
+                </p>
+              </div>
+              <div class="general-info">
+                <p>Technologies used - <span>Unity, C#</span></p>
+                <p>
+                  View Online -
+                  <span><a href="#" target="_blank">www.domain.com</a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item end -->
+
+          <!-- Portfolio item start -->
+          <div class="portfolio-item" data-category="python,machine_learning">
+            <div class="portfolio-item-thumbnail">
+              <img src="img/portfolio/6.jpg" alt="thumbnail" />
+              <button type="button" class="btn more-info-btn">
+                More info.
+              </button>
+            </div>
+            <h3 class="portfolio-item-title">Tensorflow Fundamentals.</h3>
+            <div class="portfolio-item-details">
+              <div class="description">
+                <p>
+                  Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui
+                  qui labore duis mollit eiusmod exercitation. Ex non magna sit
+                  sint voluptate ullamco consequat ex. Ad sit pariatur
+                  consectetur nisi eu esse ea veniam pariatur sunt fugiat ea
+                  minim et.
+                </p>
+              </div>
+              <div class="general-info">
+                <p>Technologies used - <span>Python, Tensorflow</span></p>
+                <p>
+                  View Online -
+                  <span><a href="#" target="_blank">www.domain.com</a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item end -->
+
+          <!-- Portfolio item start -->
+          <div class="portfolio-item" data-category="python">
+            <div class="portfolio-item-thumbnail">
+              <img src="img/portfolio/7.jpg" alt="thumbnail" />
+              <button type="button" class="btn more-info-btn">
+                More info.
+              </button>
+            </div>
+            <h3 class="portfolio-item-title">Web Scraping.</h3>
+            <div class="portfolio-item-details">
+              <div class="description">
+                <p>
+                  Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui
+                  qui labore duis mollit eiusmod exercitation. Ex non magna sit
+                  sint voluptate ullamco consequat ex. Ad sit pariatur
+                  consectetur nisi eu esse ea veniam pariatur sunt fugiat ea
+                  minim et.
+                </p>
+              </div>
+              <div class="general-info">
+                <p>Technology used - <span>Python</span></p>
+                <p>
+                  View Online -
+                  <span><a href="#" target="_blank">www.domain.com</a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item end -->
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Portfolio Item Details Popup Start -->
+    <div class="portfolio-popup">
+      <div class="pp-overlay"></div>
+      <div class="pp-inner">
+        <div class="pp-content">
+          <div class="pp-header">
+            <h2 class="pp-counter">
+            </h2>
+            <button type="button" title="close" class="close-btn pp-close-btn"></button>
+            <div class="pp-thumbnail">
+              <img src="img/portfolio/7.jpg" alt="pp-thumbnail">
+            </div>
+            <h3></h3>
+          </div>
+          <div class="pp-body">
+          </div>
+          <div class="pp-footer">
+            <div class="pp-footer-left hidden">
+              <button type="button" title="Prev Work" class="btn pp-prev-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <h3></h3>
+              <img src="img/portfolio/1.jpg" alt="Prev Work Thumbnail">
+            </div>
+            <div class="pp-footer-right hidden">
+              <button type="button" title="Next Work" class="btn pp-next-btn">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <h3></h3>
+              <img src="img/portfolio/2.jpg" alt="Next Work Thumbnail">
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- About Section End -->  
-
-<!-- Portfolio Section Start -->
-
-<section class="portfolio-section sec-padding">
-  <div class="container">
-    <div class="row">
-      <div class="section-title">
-        <h2>Recent Work.</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="portfolio-filter">
-        <button type="button" title="Show All Work." class="portfolio-filter-btn active" 
-        data-filter="all">all</button>
-        <button type="button" title="Filter by Python" class="portfolio-filter-btn" 
-        data-filter="python">Python</button>
-        <button type="button" title="Filter by Unity" class="portfolio-filter-btn" 
-        data-filter="unity">Unity</button>
-        <button type="button" title="Filter by Machine Learning" class="portfolio-filter-btn" 
-        data-filter="machine_learning">Machine Learning</button>
-      </div>
-    </div>
-    <div class="row portfolio-items">
-      <!-- Portfolio item start -->
-      <div class="portfolio-item" data-category="python">
-        <div class="portfolio-item-thumbnail">
-          <img src="img/portfolio/1.jpg" alt="thumbnail">
-          <button type="button" class="btn more-info-btn">More info.</button>
-        </div>
-        <h3 class="portfolio-item-title">Calculator Project.</h3>
-        <div class="portfolio-item-details">
-          <div class="description">
-            <p>Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui qui labore duis mollit eiusmod exercitation. Ex non magna sit sint voluptate ullamco consequat ex. Ad sit pariatur consectetur nisi eu esse ea veniam pariatur sunt fugiat ea minim et.</p>
-          </div>
-          <div class="general-info">
-            <p>Technologies used - <span>Python, Tkinter</span></p>
-            <p>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></p>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio item end -->
-
-      <!-- Portfolio item start -->
-      <div class="portfolio-item" data-category="python,machine_learning">
-        <div class="portfolio-item-thumbnail">
-          <img src="img/portfolio/2.jpg" alt="thumbnail">
-          <button type="button" class="btn more-info-btn">More info.</button>
-        </div>
-        <h3 class="portfolio-item-title">Cats vs Dogs Classifier.</h3>
-        <div class="portfolio-item-details">
-          <div class="description">
-            <p>Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui qui labore duis mollit eiusmod exercitation. Ex non magna sit sint voluptate ullamco consequat ex. Ad sit pariatur consectetur nisi eu esse ea veniam pariatur sunt fugiat ea minim et.</p>
-          </div>
-          <div class="general-info">
-            <p>Technologies used - <span>Python, Pytorch</span></p>
-            <p>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></p>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio item end -->
-
-      <!-- Portfolio item start -->
-      <div class="portfolio-item" data-category="unity">
-        <div class="portfolio-item-thumbnail">
-          <img src="img/portfolio/3.jpg" alt="thumbnail">
-          <button type="button" class="btn more-info-btn">More info.</button>
-        </div>
-        <h3 class="portfolio-item-title">Wowie Jam 2.0.</h3>
-        <div class="portfolio-item-details">
-          <div class="description">
-            <p>Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui qui labore duis mollit eiusmod exercitation. Ex non magna sit sint voluptate ullamco consequat ex. Ad sit pariatur consectetur nisi eu esse ea veniam pariatur sunt fugiat ea minim et.</p>
-          </div>
-          <div class="general-info">
-            <p>Technologies used - <span>Unity, C#</span></p>
-            <p>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></p>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio item end -->
-
-      <!-- Portfolio item start -->
-      <div class="portfolio-item" data-category="python">
-        <div class="portfolio-item-thumbnail">
-          <img src="img/portfolio/4.jpg" alt="thumbnail">
-          <button type="button" class="btn more-info-btn">More info.</button>
-        </div>
-        <h3 class="portfolio-item-title">Mini Projects.</h3>
-        <div class="portfolio-item-details">
-          <div class="description">
-            <p>Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui qui labore duis mollit eiusmod exercitation. Ex non magna sit sint voluptate ullamco consequat ex. Ad sit pariatur consectetur nisi eu esse ea veniam pariatur sunt fugiat ea minim et.</p>
-          </div>
-          <div class="general-info">
-            <p>Technology used - <span>Python</span></p>
-            <p>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></p>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio item end -->
-
-      <!-- Portfolio item start -->
-      <div class="portfolio-item" data-category="unity">
-        <div class="portfolio-item-thumbnail">
-          <img src="img/portfolio/5.jpg" alt="thumbnail">
-          <button type="button" class="btn more-info-btn">More info.</button>
-        </div>
-        <h3 class="portfolio-item-title">Wowie Jam 3.0.</h3>
-        <div class="portfolio-item-details">
-          <div class="description">
-            <p>Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui qui labore duis mollit eiusmod exercitation. Ex non magna sit sint voluptate ullamco consequat ex. Ad sit pariatur consectetur nisi eu esse ea veniam pariatur sunt fugiat ea minim et.</p>
-          </div>
-          <div class="general-info">
-            <p>Technologies used - <span>Unity, C#</span></p>
-            <p>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></p>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio item end -->
-
-      <!-- Portfolio item start -->
-      <div class="portfolio-item" data-category="python,machine_learning">
-        <div class="portfolio-item-thumbnail">
-          <img src="img/portfolio/6.jpg" alt="thumbnail">
-          <button type="button" class="btn more-info-btn">More info.</button>
-        </div>
-        <h3 class="portfolio-item-title">Tensorflow Fundamentals.</h3>
-        <div class="portfolio-item-details">
-          <div class="description">
-            <p>Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui qui labore duis mollit eiusmod exercitation. Ex non magna sit sint voluptate ullamco consequat ex. Ad sit pariatur consectetur nisi eu esse ea veniam pariatur sunt fugiat ea minim et.</p>
-          </div>
-          <div class="general-info">
-            <p>Technologies used - <span>Python, Tensorflow</span></p>
-            <p>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></p>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio item end -->
-      
-      <!-- Portfolio item start -->
-      <div class="portfolio-item" data-category="python">
-        <div class="portfolio-item-thumbnail">
-          <img src="img/portfolio/7.jpg" alt="thumbnail">
-          <button type="button" class="btn more-info-btn">More info.</button>
-        </div>
-        <h3 class="portfolio-item-title">Web Scraping.</h3>
-        <div class="portfolio-item-details">
-          <div class="description">
-            <p>Ea aliqua nulla enim sunt culpa. Aliquip culpa in ipsum qui qui labore duis mollit eiusmod exercitation. Ex non magna sit sint voluptate ullamco consequat ex. Ad sit pariatur consectetur nisi eu esse ea veniam pariatur sunt fugiat ea minim et.</p>
-          </div>
-          <div class="general-info">
-            <p>Technology used - <span>Python</span></p>
-            <p>View Online - <span><a href="#" target="_blank">www.domain.com</a></span></p>
-          </div>
-        </div>
-      </div>
-      <!-- Portfolio item end -->
-    </div>
-  </div>
-</section>
-<!-- Portfolio Section End -->
-
-<script src="js/script.js"></script>
-</body>
+    <!-- Portfolio Item Details Popup End -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
