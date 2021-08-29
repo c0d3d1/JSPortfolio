@@ -12,20 +12,45 @@
     <div class="bg-animation-effect"></div>
     <!-- Bg Animation Effect End -->
 
+    <!-- Overlay Effect Start -->
+    <div class="overlay-effect">
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+      <div class="overlay-effect-item"></div>
+    </div>
+    <!-- Overlay Effect End -->
+
     <!-- Header Start -->
-      <header class="header">
-        <div class="container">
-          <div class="row flex-end">
-            <button type="button" class="nav-toggler">
-              <span></span>
-            </button>
-          </div>
+    <header class="header">
+      <div class="container">
+        <div class="row flex-end">
+          <button type="button" class="nav-toggler">
+            <span></span>
+          </button>
+          <!-- nav -->
+          <nav class="nav">
+            <div class="nav-inner">
+              <ul>
+                <li><a href="#about" class="nav-item link-item">About</a></li>
+                <li><a href="#portfolio" class="nav-item link-item">Portfolio</a></li>
+                <li><a href="#contact" class="nav-item link-item">Contact Me</a></li>
+              </ul>
+            </div>
+          </nav>
         </div>
-      </header>
+      </div>
+    </header>
     <!-- Header End -->
 
     <!-- About Section Start-->
-    <section class="about-section">
+    <section class="about-section active" id="about">
       <div class="container">
         <div class="row min-vh-100">
           <div class="about-content">
@@ -35,8 +60,8 @@
               I am a <span>developer</span> in Arizona. I make
               <span>games and applications</span> using
               <span>C#, Unity and Python.</span> You can see my projects on my
-              <a href="#">Portfolio page.</a> Want to talk?
-              <a href="#">Click here. </a>
+              <a href="#portfolio" class="link-item">Portfolio page.</a> Want to talk?
+              <a href="#contact" class="link-item">Click here. </a>
             </p>
             <h2>Skills</h2>
             <div class="skills">
@@ -55,7 +80,7 @@
 
     <!-- Portfolio Section Start -->
 
-    <section class="portfolio-section sec-padding hidden">
+    <section class="portfolio-section sec-padding" id="portfolio">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -317,7 +342,7 @@
     <!-- Portfolio Section End -->
 
     <!-- Contact Section Start -->
-    <section class="contact-section sec-padding min-vh-100 hidden">
+    <section class="contact-section sec-padding min-vh-100" id="contact">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -353,20 +378,38 @@
           <div class="contact-form">
             <div class="contact-form-inner">
               <div class="contact-form-container">
-                <button type="button" class="close-btn toggle-contact-form-btn"></button>
+                <button
+                  type="button"
+                  class="close-btn toggle-contact-form-btn"
+                ></button>
                 <form>
                   <div class="row">
                     <div class="input-group">
-                      <input type="text" placeholder="Your Name" class="input-control">
+                      <input
+                        type="text"
+                        placeholder="Your Name"
+                        class="input-control"
+                      />
                     </div>
                     <div class="input-group">
-                      <input type="text" placeholder="Your Email" class="input-control">
+                      <input
+                        type="text"
+                        placeholder="Your Email"
+                        class="input-control"
+                      />
                     </div>
                     <div class="input-group">
-                      <input type="text" placeholder="Subject" class="input-control">
+                      <input
+                        type="text"
+                        placeholder="Subject"
+                        class="input-control"
+                      />
                     </div>
                     <div class="input-group">
-                      <textarea placeholder="Message" class="input-control"></textarea>
+                      <textarea
+                        placeholder="Message"
+                        class="input-control"
+                      ></textarea>
                     </div>
                     <div class="input-group">
                       <button type="submit" class="btn btn-submit">Send</button>

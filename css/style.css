@@ -51,6 +51,9 @@ h6 {
   color: var(--white);
   font-weight: 600;
 }
+ul {
+  list-style: none;
+}
 .container {
   max-width: 1170rem;
   margin: auto;
@@ -71,6 +74,12 @@ h6 {
 }
 .flex-end {
   justify-content: flex-end;
+}
+section {
+  display: none;
+}
+section.active {
+  display: block;
 }
 /* Buttons */
 button {
@@ -207,7 +216,63 @@ button {
   }
 }
 
-/* Header 1:51:34 Bug with white Menu */
+/* Overlay Effect */
+.overlay-effect {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  visibility: hidden;
+}
+.overlay-effect.active {
+  visibility: visible;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.overlay-effect-item {
+  height: 10vh;
+  background-color: var(--dark-light);
+  transition: all 0.5s ease;
+}
+.overlay-effect-item:nth-child(odd) {
+  transform: translateX(-100%);
+}
+.overlay-effect-item:nth-child(even) {
+  transform: translateX(100%);
+}
+.overlay-effect.active .overlay-effect-item {
+  transform: translateX(0%);
+}
+.overlay-effect-item:nth-child(2) {
+  transition-delay: 0.05s;
+}
+.overlay-effect-item:nth-child(3) {
+  transition-delay: 0.10s;
+}
+.overlay-effect-item:nth-child(4) {
+  transition-delay: 0.15s;
+}
+.overlay-effect-item:nth-child(5) {
+  transition-delay: 0.20s;
+}
+.overlay-effect-item:nth-child(6) {
+  transition-delay: 0.25s;
+}
+.overlay-effect-item:nth-child(7) {
+  transition-delay: 0.30s;
+}
+.overlay-effect-item:nth-child(8) {
+  transition-delay: 0.35s;
+}
+.overlay-effect-item:nth-child(9) {
+  transition-delay: 0.40s;
+}
+.overlay-effect-item:nth-child(10) {
+  transition-delay: 0.45s;
+}
+/* Header */
 .header {
   padding: 25rem 0 0;
   position: absolute;
@@ -215,7 +280,7 @@ button {
   top: 0;
   width: 100%;
 }
-.heaader .nav-toggler {
+.header .nav-toggler {
   height: 34rem;
   width: 44rem;
   background-color: transparent;
@@ -226,6 +291,13 @@ button {
   justify-content: center;
   position: relative;
   z-index: 101;
+  margin-right: 15rem;
+  transition: all 0.3s ease 0.4s;
+}
+.header .nav-toggler.toggle-hide {
+  transform: scale(0);
+  pointer-events: none;
+  transition-delay: 0s;
 }
 .header .nav-toggler span {
   height: 2rem;
@@ -233,6 +305,10 @@ button {
   background-color: var(--white);
   display: inline-block;
   position: relative;
+  transition: all 0.3s ease;
+}
+.header .nav-toggler.active span {
+  background-color: transparent;
 }
 .header .nav-toggler span::before,
 .header .nav-toggler span::after {
@@ -252,9 +328,88 @@ button {
   right: 0;
   transform: translateY(8rem);
 }
+.header .nav-toggler.active span::before {
+  width: 100%;
+  transform: rotate(45deg);
+}
+.header .nav-toggler.active span::after {
+  width: 100%;
+  transform: rotate(-45deg);
+}
 .header .nav-toggler:hover span::before,
 .header .nav-toggler:hover span::after {
   width: 100%;
+}
+@media(min-width: 992rem) {
+  .header .nav-toggler.active:hover span::before, 
+  .header .nav-toggler.active:hover span::after {
+    transform: rotate(0deg);
+  }
+}
+.header .nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  padding: 0 15rem;
+  overflow-y: auto;
+  visibility: hidden;
+}
+.header .nav.open {
+  visibility: visible;
+}
+.header .nav-inner {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+.header .nav.open .nav-inner {
+  transition-delay: 0.5s;
+  opacity: 1;
+  transform: scale(1);
+}
+.header .nav-inner ul {
+  padding: 80rem 0;
+}
+.header .nav-inner ul li {
+  text-align: center;
+}
+.header .nav-inner ul a {
+  font-size: 50rem;
+  display: inline-block;
+  padding: 8rem 0;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: var(--white);
+  position: relative;
+  transition: all 0.3se ease;
+}
+.header .nav-inner ul a::before {
+  content: '';
+  position: absolute;
+  height: 100rem;
+  width: 100rem;
+  background-color: var(--dark);
+  border-radius: 50%;
+  left: 0;
+  top: calc(50% - 50rem);
+  z-index: -1;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.header .nav-inner ul a:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.header .nav-inner ul a:hover {
+  color: var(--main-color);
 }
 /* About Section */
 .about-section .min-vh-100 {
