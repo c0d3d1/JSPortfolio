@@ -12,8 +12,20 @@
     <div class="bg-animation-effect"></div>
     <!-- Bg Animation Effect End -->
 
+    <!-- Header Start -->
+      <header class="header">
+        <div class="container">
+          <div class="row flex-end">
+            <button type="button" class="nav-toggler">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+    <!-- Header End -->
+
     <!-- About Section Start-->
-    <section class="about-section hidden">
+    <section class="about-section">
       <div class="container">
         <div class="row min-vh-100">
           <div class="about-content">
@@ -43,7 +55,7 @@
 
     <!-- Portfolio Section Start -->
 
-    <section class="portfolio-section sec-padding">
+    <section class="portfolio-section sec-padding hidden">
       <div class="container">
         <div class="row">
           <div class="section-title">
@@ -304,36 +316,104 @@
     </section>
     <!-- Portfolio Section End -->
 
+    <!-- Contact Section Start -->
+    <section class="contact-section sec-padding min-vh-100 hidden">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2>Contact Me.</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="contact-content">
+            <div class="contact-text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laudantium accusantium mollitia, sunt inventore unde
+                reprehenderit, iusto quibusdam quaerat veniam consequuntur, enim
+                saepe ipsam similique ullam optio accusamus dolore nihil
+                sapiente!
+              </p>
+            </div>
+            <div class="contact-info-item">
+              <p>Email Me here: <span>me@devancomes.com</span></p>
+            </div>
+            <div class="contact-info-item">
+              <p class="social-links">
+                <span>Find Me on: </span>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </p>
+            </div>
+            <button type="button" class="btn toggle-contact-form-btn">
+              Send Message
+            </button>
+          </div>
+          <!-- Contact Form Start -->
+          <div class="contact-form">
+            <div class="contact-form-inner">
+              <div class="contact-form-container">
+                <button type="button" class="close-btn toggle-contact-form-btn"></button>
+                <form>
+                  <div class="row">
+                    <div class="input-group">
+                      <input type="text" placeholder="Your Name" class="input-control">
+                    </div>
+                    <div class="input-group">
+                      <input type="text" placeholder="Your Email" class="input-control">
+                    </div>
+                    <div class="input-group">
+                      <input type="text" placeholder="Subject" class="input-control">
+                    </div>
+                    <div class="input-group">
+                      <textarea placeholder="Message" class="input-control"></textarea>
+                    </div>
+                    <div class="input-group">
+                      <button type="submit" class="btn btn-submit">Send</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Form End -->
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
     <!-- Portfolio Item Details Popup Start -->
     <div class="portfolio-popup">
       <div class="pp-overlay"></div>
       <div class="pp-inner">
         <div class="pp-content">
           <div class="pp-header">
-            <h2 class="pp-counter">
-            </h2>
-            <button type="button" title="close" class="close-btn pp-close-btn"></button>
+            <h2 class="pp-counter"></h2>
+            <button
+              type="button"
+              title="close"
+              class="close-btn pp-close-btn"
+            ></button>
             <div class="pp-thumbnail">
-              <img src="img/portfolio/7.jpg" alt="pp-thumbnail">
+              <img src="img/portfolio/7.jpg" alt="pp-thumbnail" />
             </div>
             <h3></h3>
           </div>
-          <div class="pp-body">
-          </div>
+          <div class="pp-body"></div>
           <div class="pp-footer">
             <div class="pp-footer-left hidden">
               <button type="button" title="Prev Work" class="btn pp-prev-btn">
                 <i class="fas fa-arrow-left"></i>
               </button>
               <h3></h3>
-              <img src="img/portfolio/1.jpg" alt="Prev Work Thumbnail">
+              <img src="img/portfolio/1.jpg" alt="Prev Work Thumbnail" />
             </div>
             <div class="pp-footer-right hidden">
               <button type="button" title="Next Work" class="btn pp-next-btn">
                 <i class="fas fa-arrow-right"></i>
               </button>
               <h3></h3>
-              <img src="img/portfolio/2.jpg" alt="Next Work Thumbnail">
+              <img src="img/portfolio/2.jpg" alt="Next Work Thumbnail" />
             </div>
           </div>
         </div>
