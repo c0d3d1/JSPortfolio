@@ -112,7 +112,7 @@ button {
   transition: transform 0.3s ease;
   pointer-events: none;
 }
-@media (min-width: 48em) {
+@media (min-width: 48rem) {
   .btn:hover::before {
     transform: translate(0em, 0em);
   }
@@ -272,6 +272,52 @@ button {
 .overlay-effect-item:nth-child(10) {
   transition-delay: 0.45s;
 }
+
+/* Page Loader */
+.page-loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--dark-light);
+  color: var(--white-light);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25rem;
+  font-weight: 400;
+}
+.page-loader.slide-out-right {
+  transform: translateX(100%);
+  transition: transform 0.6s ease 0.4s;
+}
+.page-loader-inner {
+  display: flex;
+  align-items: center;
+}
+.page-loader.slide-out-right .page-loader-inner {
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+.page-loader .circle {
+  height: 30rem;
+  width: 30rem;
+  border: 2rem solid var(--white-light);
+  border-right-color: transparent;
+  border-radius: 50%;
+  margin-right: 15rem;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Header */
 .header {
   padding: 25rem 0 0;
@@ -340,7 +386,7 @@ button {
 .header .nav-toggler:hover span::after {
   width: 100%;
 }
-@media(min-width: 992rem) {
+@media(min-width: 62rem) {
   .header .nav-toggler.active:hover span::before, 
   .header .nav-toggler.active:hover span::after {
     transform: rotate(0deg);
@@ -482,7 +528,7 @@ button {
   padding: 0 15rem;
   width: 100%;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 30rem;
 }
 .portfolio-filter-btn {
   padding: 4rem 10rem;
@@ -535,8 +581,8 @@ button {
   font-weight: 600;
 }
 .portfolio-item {
-  width: calc((100% / 3) - 30px);
-  margin: 0 15px 30px;
+  width: calc((100% / 3) - 30rem);
+  margin: 0 15rem 30rem;
   cursor: pointer;
   display: none;
 }
@@ -767,6 +813,7 @@ button {
   width: 100%;
   margin: auto;
   text-align: center;
+  padding: 0 15rem;
 }
 .contact-text {
   margin-bottom: 30rem;
@@ -784,7 +831,7 @@ button {
 .contact-info-item .social-links a {
   height: 40rem;
   width: 40rem;
-  border: 1px solid var(--white-light);
+  border: 1rem solid var(--white-light);
   font-size: 16rem;
   display: inline-flex;
   align-items: center;
@@ -860,7 +907,7 @@ button {
   font-size: 16rem;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid var(--white-light);
+  border-bottom: 1rem solid var(--white-light);
   color: var(--white);
   transition: all 0.5s ease;
 }
@@ -872,4 +919,43 @@ button {
   height: 120rem;
   padding-top: 15rem;
   resize: none;
+}
+
+/* Responsive */
+@media(max-width: 62rem) {
+  .bg-animation-effect .col-10,
+  .bg-animation-effect .col-9,
+  .bg-animation-effect .col-8 {
+    display: none;
+  }
+  .bg-animation-effect div {
+    margin-left: calc((100% - 28rem) / 8);
+  }
+  .portfolio-item {
+    width: calc(50% - 30rem);
+  }
+}
+@media(max-width: 45rem) {
+  .bg-animation-effect .col-7,
+  .bg-animation-effect .col-6 {
+    display: none;
+  }
+  .bg-animation-effect div {
+    margin-left: calc((100% - 20rem) / 6);
+  }
+  .portfolio-item {
+    width: calc(100% - 30rem);
+  }
+}
+@media(max-width: 33rem) {
+  .pp-footer h3 {
+    font-size: 16rem;
+  }
+  .contact-info-item p {
+    font-size: 18rem;
+  }
+  .contact-info-item span {
+    display: block;
+    margin-bottom: 10rem;
+  }
 }
