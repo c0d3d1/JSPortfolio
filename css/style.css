@@ -809,7 +809,7 @@ button {
   display: flex;
 }
 .contact-content {
-  min-width: 700rem;
+  min-width: 400rem;
   width: 100%;
   margin: auto;
   text-align: center;
