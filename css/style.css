@@ -474,12 +474,11 @@ button {
   margin: 0 0 15rem;
 }
 .about-content h1 {
-  font-size: 28rem;
+  font-size: 45rem;
   margin: 0 0 8rem;
 }
 .about-content p span {
   font-weight: 600;
-  text-transform: capitalize;
 }
 .about-content p a {
   color: var(--main-color);
@@ -961,5 +960,11 @@ button {
   .contact-info-item span {
     display: block;
     margin-bottom: 10rem;
+  }
+  .h1 {
+    font-size: 20rem;
+  }
+  body {
+    font-size: 20rem;
   }
 }
